@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HealthyBody.vn</title>
+    <style>
+      body {
+        /* background-image: url("./da.jpg"); */
+        background-color: hwb(232 50% 4%);
+      }
+      .warning {
+        color: red;
+      }
+      .anh img {
+        position: absolute;
+        margin-top: -1300px;
+        margin-left: 950px;
+        width: 40%;
+        height: 190%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Order đồ ăn</h1>
+    <form id="order-form">
+      <h2>Bệnh béo phì</h2>
+      <ul>
+        <li>
+          <input
+            type="radio"
+            name="beo-phi"
+            value="1 chén ngũ cốc nguyên hạt kèm sữa ít béo và một trái táo"
+          />
+          Món (1 chén ngũ cốc nguyên hạt kèm sữa ít béo và một trái táo) - Giá:
+          30.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="beo-phi"
+            value="1 suất salad rau xanh pha lẫn thịt gà hoặc cá hồi nướng, kèm 1 chén gạo lứt"
+          />
+          Món (1 suất salad rau xanh pha lẫn thịt gà hoặc cá hồi nướng, kèm 1
+          chén gạo lứt) - Giá: 70.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="beo-phi"
+            value="1 suất canh rau cải ngọt, 1 cá hồi nướng kèm rau xanh"
+          />
+          Món (1 suất canh rau cải ngọt, 1 cá hồi nướng kèm rau xanh) - Giá:
+          60.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="beo-phi"
+            value="1 chén sữa chua không đường pha chút ngũ cốc nguyên hạt và trái cây tươi"
+          />
+          Món( 1 chén sữa chua không đường pha chút ngũ cốc nguyên hạt và trái
+          cây tươi) - Giá: 30.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="beo-phi"
+            value="1 suất thịt gà nướng kèm rau xanh như bắp cải xanh, cà chua và 1 chén gạo lứt."
+          />
+          Món (1 suất thịt gà nướng kèm rau xanh như bắp cải xanh, cà chua và 1
+          chén gạo lứt) - Giá: 80.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="beo-phi"
+            value="1 ổ bánh mì nguyên hạt kèm một lát thịt băm ít béo, rau sống và trái cây"
+          />
+          Món (1 ổ bánh mì nguyên hạt kèm một lát thịt băm ít béo, rau sống và
+          trái cây) - Giá: 40.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="beo-phi"
+            value="1 suất canh đậu hủ nấu cà rốt, nấm và rau xanh"
+          />
+          Món (1 suất canh đậu hủ nấu cà rốt, nấm và rau xanh) - Giá: 25.000đ
+        </li>
+      </ul>
+
+      <h2>Bệnh tiểu đường</h2>
+      <ul>
+        <li>
+          <input
+            type="radio"
+            name="tieu-duong"
+            value="1 chén bột yến mạch hòa quyện với nước hoặc sữa không đường, kèm trái cây tươi."
+          />
+          Món (1 chén bột yến mạch hòa quyện với nước hoặc sữa không đường, kèm
+          trái cây tươi) - Giá: 30.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="tieu-duong"
+            value=" Một trái táo hoặc một chén hạt hướng dương không muối"
+          />
+          Món (Một trái táo hoặc một chén hạt hướng dương không muối) - Giá:
+          15.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="tieu-duong"
+            value="1 suất salad cá ngừ hoặc tôm, kèm rau xanh và dầu dấm táo"
+          />
+          Món (1 suất salad cá ngừ hoặc tôm, kèm rau xanh và dầu dấm táo) - Giá:
+          85.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="tieu-duong"
+            value="1 suất bò hầm kèm rau xanh như bắp cải xanh, cà chua và 1 chén gạo lứt"
+          />
+          Món (1 suất bò hầm kèm rau xanh như bắp cải xanh, cà chua và 1 chén
+          gạo lứt) - Giá: 80.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="tieu-duong"
+            value="1 suất thịt nạc heo xào rau củ như cà rốt, bắp cải và hành tây, kèm 1 chén gạo lứt."
+          />
+          Món (1 suất thịt nạc heo xào rau củ như cà rốt, bắp cải và hành tây,
+          kèm 1 chén gạo lứt) - Giá: 65.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="tieu-duong"
+            value="1 bát cháo gạo lứt pha thêm ít nấm hương và hành tím"
+          />
+          Món (1 bát cháo gạo lứt pha thêm ít nấm hương và hành tím) - Giá:
+          25.000đ
+        </li>
+      </ul>
+
+      <h2>Bệnh suy dinh dưỡng</h2>
+      <ul>
+        <li>
+          <input
+            type="radio"
+            name="suy-dinh-duong"
+            value="1 suất bún tàu gồm bún, thịt gà hoặc thịt bò xào, rau xanh như rau muống, cải bẹ xanh, và tôm"
+          />
+          Món (1 suất bún tàu gồm bún, thịt gà hoặc thịt bò xào, rau xanh như
+          rau muống, cải bẹ xanh, và tôm) - Giá: 90.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="suy-dinh-duong"
+            value="1 suất canh chua nấu cá hồi với rau củ như cà rốt, khoai tây, kèm cơm trắng"
+          />
+          Món (1 suất canh chua nấu cá hồi với rau củ như cà rốt, khoai tây, kèm
+          cơm trắng) - Giá: 55.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="suy-dinh-duong"
+            value="1 chén bột yến mạch hòa quyện với sữa ít béo hoặc sữa hạt, kèm trái cây tươi và một muỗng mật ong"
+          />
+          Món (1 chén bột yến mạch hòa quyện với sữa ít béo hoặc sữa hạt, kèm
+          trái cây tươi và một muỗng mật ong) - Giá: 30.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="suy-dinh-duong"
+            value=" ổ bánh mì nguyên hạt kèm một lát thịt gà không da, rau sống và trái cây"
+          />
+          Món (ổ bánh mì nguyên hạt kèm một lát thịt gà không da, rau sống và
+          trái cây) - Giá: 35.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="suy-dinh-duong"
+            value="1 suất bún tàu gồm bún, cá basa nướng, rau xanh và tôm."
+          />
+          Món (1 suất bún tàu gồm bún, cá basa nướng, rau xanh và tôm) - Giá:
+          110.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="suy-dinh-duong"
+            value=" 1 suất canh đậu hủ nấu cà rốt, nấm và rau xanh, kèm cơm trắng"
+          />
+          Món (1 suất canh đậu hủ nấu cà rốt, nấm và rau xanh, kèm cơm trắng) -
+          Giá: 50.000đ
+        </li>
+      </ul>
+
+      <h2>Bệnh huyết áp</h2>
+      <ul>
+        <li>
+          <input
+            type="radio"
+            name="huyet-ap"
+            value="cơm thịt gà với rau trộn, kèm theo phô mai ít béo."
+          />
+          Món (cơm thịt gà với rau trộn, kèm theo phô mai ít béo) - Giá: 45.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="huyet-ap"
+            value=" Cá hồi áp chảo ăn kèm với khoai tây nghiền và rau luộc"
+          />
+          Món (Cá hồi áp chảo ăn kèm với khoai tây nghiền và rau luộc) - Giá:
+          60.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="huyet-ap"
+            value="Thịt heo xào ớt chuông ăn, cơm gạo lứt, rau muống hoặc bắp cải luộc."
+          />
+          Món (Thịt heo xào ớt chuông ăn, cơm gạo lứt, rau muống hoặc bắp cải
+          luộc) - Giá: 50.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="huyet-ap"
+            value="Trứng luộc, thịt gà xông khói, cà chua, hai lát bánh mì lúa mạch nướng, nước ép dâu"
+          />
+          Món (Trứng luộc, thịt gà xông khói, cà chua, hai lát bánh mì lúa mạch
+          nướng, nước ép dâu) - Giá: 70.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="huyet-ap"
+            value="gà nướng mật ong ăn kèm với rau củ nướng hoặc salad trộn dầu giấm"
+          />
+          Món (gà nướng nguyên con mật ong ăn kèm với rau củ nướng hoặc salad
+          trộn dầu giấm) - Giá: 150.000đ
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="huyet-ap"
+            value="bít tết (thịt bò hay thịt heo đều được) ăn kèm với khoai tây nghiền, phô mai ít béo, bông cải xanh luộc và đậu Hà Lan"
+          />
+          Món (bít tết ăn kèm với khoai tây nghiền, phô mai ít béo, bông cải
+          xanh luộc và đậu Hà Lan) - Giá: 70.000đ
+        </li>
+      </ul>
+
+      <h2>Thông tin đặt hàng</h2>
+      <p>Nhập địa chỉ giao hàng:</p>
+      <input type="text" id="address-input" /><br />
+      <center><img src="./qr.jpg" /></center>
+      <button type="button" onclick="placeOrder()">Thanh toán</button>
+    </form>
+
+    <div id="order-summary" style="display: none">
+      <h2>Hóa đơn</h2>
+      <div id="order-items"></div>
+      <p>Phí ship: 30.000đ</p>
+      <p id="total-price"></p>
+      <script>
+        function placeOrder() {
+          var selectedItems = document.querySelectorAll(
+            'input[type="radio"]:checked'
+          );
+          if (selectedItems.length === 0) {
+            alert("Vui lòng chọn ít nhất một món ăn.");
+            return;
+          }
+          if (selectedItems.length > 1) {
+            alert("Bạn chỉ được chọn một món ăn.");
+            return;
+          }
+
+          var selectedItem = selectedItems[0];
+          var itemName = selectedItem.parentNode.textContent
+            .trim()
+            .split(" - ")[0];
+          var itemPrice = parseInt(
+            selectedItem.parentNode.textContent
+              .trim()
+              .split(" - ")[1]
+              .split("Giá: ")[1]
+          );
+          var address = document.getElementById("address-input").value;
+
+          var orderItems = document.getElementById("order-items");
+          orderItems.innerHTML =
+            "<p>Món ăn đã chọn: " +
+            itemName +
+            " - Giá: " +
+            itemPrice +
+            ".000đ</p>";
+          document.getElementById("total-price").textContent =
+            "Tổng tiền: " + (itemPrice + 30.0) + ".000đ";
+          document.getElementById("order-summary").style.display = "block";
+
+          var successMessage = document.createElement("p");
+          successMessage.textContent =
+            "Quý khách đã đặt hàng thành công. Chúc quý khách ngon miệng!";
+          document.body.appendChild(successMessage);
+        }
+      </script>
+    </div>
+    <div class="anh">
+      <img src="./anhThapDinhDuong.jpg" alt="" />
+    </div>
+  </body>
+</html>

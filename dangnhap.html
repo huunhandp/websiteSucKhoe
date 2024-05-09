@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HealthyBody.vn</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        background-image: url("./17.jpg");
+      }
+      body {
+        background-color: #f1f1f1;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 400px;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+      }
+
+      button {
+        background-color: hsl(218, 49%, 46%);
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: hsl(218, 49%, 46%);
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .social-login {
+        margin-top: 20px;
+      }
+
+      .social-login p {
+        margin-bottom: 10px;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+      }
+
+      .social-icons a {
+        display: inline-block;
+        margin: 0 5px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: hsl(218, 49%, 46%);
+        color: #fff;
+        text-align: center;
+        line-height: 40px;
+        transition: background-color 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        background-color: hsl(218, 49%, 46%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Đăng nhập</h2>
+      <form action="http://127.0.0.1:5500/.vscode/HTML/HoaDon.html">
+        <div class="form-group">
+          <label for="username">Tên đăng nhập:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Mật khẩu:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit">Đăng nhập</button>
+        <div class="text-center social-login">
+          <p>Hoặc đăng nhập bằng:</p>
+          <div class="social-icons">
+            <a href="https://mail.google.com/mail/u/0/?pli=1"
+              ><i class="fa fa-google"></i
+            ></a>
+          </div>
+        </div>
+        <div class="text-center">
+          <p>
+            Nếu chưa có tài khoản,
+            <a href="http://127.0.0.1:5500/.vscode/HTML/DangKy.html">đăng ký</a>
+            ngay!
+          </p>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HealthyBody.vn</title>
+    <style>
+      body {
+        background-image: url("./tapluyen.jpg");
+      }
+      .menu {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .function {
+        width: 200px;
+        height: 150px;
+        margin: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .function img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chế độ tập luyện</h1>
+
+    <div class="menu">
+      <div class="function" onclick="diabetesFunction()">
+        <h2>Bệnh tiểu đường</h2>
+        <img src="path_to_diabetes_image.jpg" alt="" />
+      </div>
+
+      <div class="function" onclick="malnutritionFunction()">
+        <h2>Suy dinh dưỡng</h2>
+        <img src="path_to_malnutrition_image.jpg" alt="" />
+      </div>
+
+      <div class="function" onclick="bloodPressureFunction()">
+        <h2>Huyết áp</h2>
+        <img src="path_to_blood_pressure_image.jpg" alt="" />
+      </div>
+
+      <div class="function" onclick="obesityFunction()">
+        <h2>Béo phì</h2>
+        <img src="path_to_obesity_image.jpg" alt="" />
+      </div>
+    </div>
+
+    <div id="content">
+      <!-- Nội dung chức năng sẽ được hiển thị ở đây -->
+    </div>
+
+    <script>
+      function diabetesFunction() {
+        document.getElementById("content").innerHTML = `
+                <h2>Chức năng Bệnh tiểu đường</h2>
+                <pre>
+Thứ 2:
+
+Tập đi bộ nhanh trong 30 phút. Bạn có thể chọn đi bộ ngoài trời hoặc sử dụng máy chạy bộ.
+Thực hiện các bài tập tăng cường cơ bắp như squat, bụng, và nâng tạ trong 20-30 phút.
+Tập thở và thực hiện các bài tập thư giãn như yoga trong 10-15 phút.
+Thứ 3:
+
+Tập aerobic nhịp điệu trong 30 phút. Có thể tham gia lớp aerobic hoặc tập theo video hướng dẫn.
+Thực hiện các bài tập tăng cường cơ bắp như bài tập cơ ngực, cơ vai, và cơ chân trong 20-30 phút.
+Tập thở và thực hiện các bài tập thư giãn như tai chi trong 10-15 phút.
+Thứ 4:
+
+Tập bơi trong 30 phút. Bơi là một hoạt động tốt cho người mắc bệnh tiểu đường vì nó không gây áp lực lên các khớp và cung cấp lợi
+ích cho toàn bộ cơ thể.
+Thực hiện các bài tập tăng cường cơ bắp như bài tập cơ lưng, cơ tay, và cơ bụng trong 20-30 phút.
+Tập thở và thực hiện các bài tập thư giãn như stretching trong 10-15 phút.
+Thứ 5:
+
+Tập thể dục nhịp điệu như zumba trong 30 phút. Đây là một hoạt động vui nhộn và giúp đốt cháy calo.
+Thực hiện các bài tập tăng cường cơ bắp như bài tập cơ đùi, cơ bắp lưng, và cơ bụng trong 20-30 phút.
+Tập thở và thực hiện các bài tập thư giãn như Pilates trong 10-15 phút.
+Thứ 6:
+
+Tập chạy bộ trong 30 phút. Nếu bạn không thể chạy, bạn có thể đi bộ nhanh.
+Thực hiện các bài tập tăng cường cơ bắp như squat, bụng, và nâng tạ trong 20-30 phút.
+Tập thở và thực hiện các bài tập thư giãn như yoga trong 10-15 phút.
+Thứ 7:
+
+Tập aerobic nhịp điệu trong 30 phút.
+Thực hiện các bài tập tăng cường cơ bắp như bài tập cơ ngực, cơ vai, và cơ chân trong 20-30 phút.
+Tập thở và thực hiện các bài tập thư giãn như tai chi trong 10-15 phút.
+Chủ nhật:
+
+Ngày nghỉ hoặc thực hiện các hoạt động nhẹ như đi dạo, tập thể dục nhẹ nhàng hoặc thư giãn.
+                </pre>
+            `;
+      }
+
+      function malnutritionFunction() {
+        document.getElementById("content").innerHTML = `
+                <h2>Chức năng Suy dinh dưỡng</h2>
+                <pre>
+Thứ 2:
+
+Tập đi bộ nhẹ trong 20-30 phút. Bắt đầu từ một tốc độ chậm và dần dần tăng tốc độ theo khả năng của bạn.
+Thực hiện các bài tập tăng cường cơ bắp như bài tập cơ ngực, cơ vai, và cơ chân trong 15-20 phút.
+Tập thở và thực hiện các bài tập thư giãn như yoga hoặc stretching trong 10-15 phút.
+Thứ 3:
+
+Tham gia lớp thể dục nhẹ nhàng như yoga hoặc Pilates trong 30-45 phút. Đảm bảo chọn lớp phù hợp với mức độ sức khỏe của bạn.
+Tập thở và thực hiện các bài tập thư giãn như tai chi trong 10-15 phút.
+Thứ 4:
+
+Tập thể dục nhẹ nhàng như bài tập đi bộ trong nước trong 20-30 phút. Nếu bạn không có bể bơi, bạn có thể tham gia các lớp thể dục 
+trong nước hoặc tập theo video hướng dẫn.
+Thực hiện các bài tập tăng cường cơ bắp như bài tập cơ lưng, cơ tay, và cơ bụng trong 15-20 phút.
+Tập thở và thực hiện các bài tập thư giãn như yoga hoặc stretching trong 10-15 phút.
+Thứ 5:
+
+Tập thể dục nhẹ nhàng như đi bộ nhanh trong 20-30 phút.
+Thực hiện các bài tập tăng cường cơ bắp như squat, bụng, và nâng tạ nhẹ trong 15-20 phút.
+Tập thở và thực hiện các bài tập thư giãn như yoga hoặc stretching trong 10-15 phút.
+Thứ 6:
+
+Thực hiện các bài tập tăng cường cơ bắp như bài tập cơ ngực, cơ vai, và cơ chân trong 15-20 phút.
+Tập thở và thực hiện các bài tập thư giãn như yoga hoặc stretching trong 10-15 phút.
+Nếu bạn có thể, hãy tham gia một hoạt động như đi xe đạp ngoài trời trong 30-45 phút.
+Thứ 7:
+
+Tham gia lớp thể dục nhẹ nhàng như aerobic hoặc zumba trong 30-45 phút. Đảm bảo lựa chọn lớp phù hợp với mức độ sức khỏe của bạn.
+Tập thở và thực hiện các bài tập thư giãn như tai chi trong 10-15 phút.
+Chủ nhật:
+
+Ngày nghỉ hoặc thực hiện các hoạt động nhẹ như đi dạo, tập thể dục nhẹ nhàng hoặc thư giãn.
+                </pre>   
+            `;
+      }
+
+      function bloodPressureFunction() {
+        document.getElementById("content").innerHTML = `
+                <h2>Chức năng Huyết áp</h2>
+                <pre>
+Thứ 2:
+
+Tập đi bộ nhanh trong 30 phút.
+Thực hiện các bài tập tăng cường cơ bắp như squat, bụng, và nâng tạ trong 20-30 phút.
+Tập thở và thực hiện các bài tập thư giãn như yoga trong 10-15 phút.
+Thứ 3:
+
+Tập aerobic nhịp điệu trong 30 phút.
+Thực hiện các bài tập tăng cường cơ bắp như bài tập cơ ngực, cơ vai, và cơ chân trong 20-30 phút.
+Tập thở và thực hiện các bài tập thư giãn như tai chi trong 10-15 phút.
+Thứ 4:
+
+Tập bơi trong 30 phút.
+Thực hiện các bài tập tăng cường cơ bắp như bài tập cơ lưng, cơ tay, và cơ bụng trong 20-30 phút.
+Tập thở và thực hiện các bài tập thư giãn như stretching trong 10-15 phút.
+Thứ 5:
+
+Tập thể dục nhịp điệu như zumba trong 30 phút.
+Thực hiện các bài tập tăng cường cơ bắp như bài tập cơ đùi, cơ bắp lưng, và cơ bụng trong 20-30 phút.
+Tập thở và thực hiện các bài tập thư giãn như Pilates trong 10-15 phút.
+Thứ 6:
+
+Tập chạy bộ trong 30 phút.
+Thực hiện các bài tập tăng cường cơ bắp như squat, bụng, và nâng tạ trong 20-30 phút.
+Tập thở và thực hiện các bài tập thư giãn như yoga trong 10-15 phút.
+Thứ 7:
+
+Tập aerobic nhịp điệu trong 30 phút.
+Thực hiện các bài tập tăng cường cơ bắp như bài tập cơ ngực, cơ vai, và cơ chân trong 20-30 phút.
+Tập thở và thực hiện các bài tập thư giãn như tai chi trong 10-15 phút.
+Chủ nhật:
+
+Ngày nghỉ hoặc thực hiện các hoạt động nhẹ như đi dạo, tập thể dục nhẹ nhàng hoặc thư giãn.
+                </pre>
+            `;
+      }
+
+      function obesityFunction() {
+        document.getElementById("content").innerHTML = `
+                <h2>Chức năng Béo phì</h2>
+               <pre>
+Thứ 2:
+
+Thực hiện các bài tập cardio như chạy bộ, xe đạp tĩnh, hoặc nhảy dây trong 30-45 phút.
+Thực hiện các bài tập tăng cường cơ bắp như squat, bụng, và nâng tạ trong 20-30 phút.
+Tập thở và thực hiện các bài tập thư giãn như yoga hoặc stretching trong 10-15 phút.
+Thứ 3:
+
+Tham gia lớp thể dục nhịp điệu như aerobic hoặc zumba trong 45-60 phút.
+Thực hiện các bài tập tăng cường cơ bắp như bài tập cơ ngực, cơ vai, và cơ chân trong 20-30 phút.
+Tập thở và thực hiện các bài tập thư giãn như tai chi trong 10-15 phút.
+Thứ 4:
+
+Tập bơi trong 30-45 phút. Bơi là một hoạt động tốt cho người béo phì vì nó không tạo áp lực lên các khớp và cung cấp lợi ích 
+cho toàn bộ cơ thể.
+Thực hiện các bài tập tăng cường cơ bắp như bài tập cơ lưng, cơ tay, và cơ bụng trong 20-30 phút.
+Tập thở và thực hiện các bài tập thư giãn như yoga hoặc stretching trong 10-15 phút.
+Thứ 5:
+
+Thực hiện các bài tập cardio như đi bộ nhanh, leo cầu thang, hoặc nhảy dây trong 30-45 phút.
+Thực hiện các bài tập tăng cường cơ bắp như squat, bụng, và nâng tạ trong 20-30 phút.
+Tập thở và thực hiện các bài tập thư giãn như yoga hoặc stretching trong 10-15 phút.
+Thứ 6:
+
+Tham gia lớp thể dục nhẹ nhàng như yoga hoặc Pilates trong 45-60 phút.
+Thực hiện các bài tập tăng cường cơ bắp như bài tập cơ ngực, cơ vai, và cơ chân trong 20-30 phút.
+Tập thở và thực hiện các bài tập thư giãn như tai chi trong 10-15 phút.
+Thứ 7:
+
+Tập thể dục nhẹ nhàng như đi dạo trong 30-45 phút.
+Thực hiện các bài tập tăng cường cơ bắp như bài tập cơ lưng, cơ tay, và cơ bụng trong 20-30 phút.
+Tập thở và thực hiện các bài tập thư giãn như yoga hoặc stretching trong 10-15 phút.
+Chủ nhật:
+
+Ngày nghỉ hoặc thực hiện các hoạt động nhẹ như đi dạo, tập thể dục nhẹ nhàng hoặc thư giãn.
+             </pre>
+            `;
+      }
+    </script>
+  </body>
+</html>

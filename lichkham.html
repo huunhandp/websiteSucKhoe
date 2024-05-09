@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HealthyBody.vn</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body {
+        background-image: url("./kienthuc2.jpg");
+      }
+      .image-container {
+        display: none;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Đặt lịch khám</h1>
+    <form id="appointmentForm">
+      <label for="fullName">Họ tên:</label>
+      <input type="text" id="fullName" required />
+
+      <label for="province">Tỉnh/Thành phố:</label>
+      <select id="province" required>
+        <option value="AnGiang">An Giang</option>
+        <option value="VungTau">Bà Rịa-Vũng Tàu</option>
+        <option value="BacGiang">Bắc Giang</option>
+        <option value="BacKan">Bắc Kạn</option>
+        <option value="BacLieu">Bạc Liêu</option>
+        <option value="BacNinh">Bắc Ninh</option>
+        <option value="BenTre">Bến Tre</option>
+        <option value="BinhDinh">Bình Định</option>
+        <option value="BinhDuong">Bình Dương</option>
+        <option value="BinhPhuoc">Bình Phước</option>
+        <option value="BinhThuan">Bình Thuận</option>
+        <option value="CaMau">Cà Mau</option>
+        <option value="CanTho">Cần Thơ</option>
+        <option value="CaoBang">Cao Bằng</option>
+        <option value="DaNang">Đà Nẵng</option>
+        <option value="DakLak">Đắk Lắk</option>
+        <option value="DakNong">Đắk Nông</option>
+        <option value="DienBien">Điện Biên</option>
+        <option value="DongNai">Đồng Nai</option>
+        <option value="DongThap">Đồng Tháp</option>
+        <option value="GiaLai">Gia Lai</option>
+        <option value="HaGiang">Hà Giang</option>
+        <option value="HaNam">Hà Nam</option>
+        <option value="HaNoi">Hà Nội</option>
+        <option value="HaTinh">Hà Tĩnh</option>
+        <option value="HaiDuong">Hải Dương</option>
+        <option value="HaiPhong">Quảng Nam</option>
+        <option value="HauGiang">Đà Nẵng</option>
+        <option value="TPHoChiMinh">Thành Phố Hồ Chí Minh</option>
+        <option value="HoaBinh">Hòa Bình</option>
+        <option value="HungYen">Hưng Yên</option>
+        <option value="KhanhHoa">Khánh Hòa</option>
+        <option value="KienGiang">Kiên Giang</option>
+        <option value="Komtum">Kom Tum</option>
+        <option value="LaiChau">Lai Châu</option>
+        <option value="LamDong">Lâm Đồng</option>
+        <option value="LangSon">Lạng Sơn</option>
+        <option value="LaoCai">Lào Cai</option>
+        <option value="LongAn">Long An</option>
+        <option value="NamDinh">Nam Định</option>
+        <option value="NgheAn">Nghệ An</option>
+        <option value="NinhBinh">Ninh Bình</option>
+        <option value="NinhThuan">Ninh Thuận</option>
+        <option value="PhuTho">Phú Thọ</option>
+        <option value="PhuYen">Phú Yên</option>
+        <option value="QuangBinh">Quảng Bình</option>
+        <option value="QuangNam">Quảng Nam</option>
+        <option value="QuangNgai">Quảng Ngãi</option>
+        <option value="QuangNinh">Quảng Ninh</option>
+        <option value="QuangTri">Quảng Trị</option>
+        <option value="SocTrang">Sóc Trăng</option>
+        <option value="SonLa">Sơn La</option>
+        <option value="TayNinh">Tây Ninh</option>
+        <option value="ThaiBinh">Thái Bình</option>
+        <option value="ThaiNguyen">Thái Nguyên</option>
+        <option value="ThanhHoa">Thanh Hóa</option>
+        <option value="Hue">Thừa Thiên-Huế</option>
+        <option value="TienGiang">Tiền Giang</option>
+        <option value="TraVinh">Trà Vinh</option>
+        <option value="TuyenQuang">Tuyên Quang</option>
+        <option value="VinhLong">Vĩnh Long</option>
+        <option value="VinhPhuc">Vĩnh Phúc</option>
+        <option value="YenBai">Yên Bái</option>
+      </select>
+
+      <label for="hospital">Bệnh viện:</label>
+      <select id="hospital" required>
+        <option value="">Chọn bệnh viện</option>
+      </select>
+
+      <label for="doctor">Bác sĩ:</label>
+      <select id="doctor" required>
+        <option value="">Chọn bác sĩ</option>
+      </select>
+
+      <label for="appointmentDate">Ngày khám:</label>
+      <input type="date" id="appointmentDate" required />
+
+      <label for="appointmentTime">Giờ khám:</label>
+      <input type="time" id="appointmentTime" required />
+
+      <button type="submit" onclick="login()">Đặt lịch ngay</button>
+      <script>
+        function login() {
+          window.location.href = "./dangnhap.html";
+        }
+      </script>
+    </form>
+
+    <script>
+      const hospitals = {
+        AnGiang: {
+          ĐaKhoaHanhPhucAnGiang: [
+            "Phan Quốc Hùng",
+            "Phạm Thị Hải Quỳnh",
+            "Nguyễn Trường Sơn",
+            "Võ Phước Toàn",
+            "Lâm Thị Huệ Hương",
+            "Trần Văn Bình",
+            "Nguyễn Anh Linh",
+            "Nguyễn Thị Vàng",
+            "Bùi Duy Phong",
+            "Phan Thị Thảo",
+          ],
+        },
+        VungTau: {
+          LeLoi: [
+            "Lê Quốc Bàn",
+            "Vũ Thị Phương Nga",
+            "Nguyễn Văn Lê",
+            "Nguyễn Trường Sơn",
+            "Lê Văn Hùng",
+            "Trần Mạnh Tuân",
+            "Nguyễn Ngọc Hùng",
+            "Lê Thị Thu Trang",
+            "Nguyễn Thanh Xuân",
+            "Vũ Viết Phúc",
+          ],
+        },
+        BacGiang: {
+          ĐaKhoaSongThuong: [
+            "Đỗ Thị Khánh Vân",
+            "Trần Thị Dung",
+            "Trần Thị Lệ",
+            "Nguyễn Thị Duyên",
+            "Đào Hữu Tiến",
+            "Nguyễn Thị Minh Ngọc",
+          ],
+        },
+        BacKan: {
+          PhongKhamDaKhoaVietDuc: [
+            "Hoàng Công Lâm",
+            "Nguyễn Thị Quỳnh Hương",
+            "Đặng Thị Xuân",
+            "Nguyễn Danh Tâm",
+            "Hà Huy Thực",
+          ],
+        },
+        BacLieu: {
+          ThanhVuMEDIC: [
+            "Lâm Quốc Na",
+            "Lý Kim Ngọc",
+            "Nguyễn Duy Kha",
+            "Nguyễn Thanh Phong",
+            "Lê Thị Tập",
+            "Phạm Kha Ly",
+          ],
+        },
+        BacNinh: {
+          TamDuc: [
+            "Phạm Bửu Hoàng",
+            "Phạm Hữu Sang",
+            "Ngô Thị Huỳnh Nga",
+            "Nguyễn Thị Bài",
+          ],
+          DaKhoaBacHa: [
+            "Lưu Quốc Khải",
+            "Bùi Minh Phúc",
+            "Trần Thị Hoa",
+            "Nguyễn Thắng Lợi",
+            "Nguyễn Thị Mến",
+            "Đỗ Tuấn Anh",
+          ],
+        },
+        BenTre: {
+          DaKhoaTamAn: [
+            "Nguyễn Bá Hợp",
+            "Nguyễn Thanh Lâm",
+            "Trương Phú Sang",
+            "Lê Hoàng Phương",
+            "Đặng Thị Bình",
+          ],
+        },
+        BinhDinh: {
+          DaKhoaToanMy: ["Nguyễn Khắc Thạo"],
+        },
+        BinhDuong: {
+          DaKhoaSaiGonBinhDuong: [
+            "Nguyễn Văn Tiên",
+            "Lê Chí Thiện",
+            "Hứa Thị Mỹ Ngọc",
+            "Lê Thị Giao My",
+            "Nguyễn Tuấn Khanh",
+          ],
+          DaKhoaQuocTeBECAMEX: [
+            "Trần Văn Nam",
+            "Phạm Thị Tố Tâm",
+            "Nguyễn Thị Nguyên",
+            "Bùi Như Giang",
+            "Vũ Tuấn Hùng",
+          ],
+          ColumbiaAsia: [
+            "Cao Lac Khang",
+            "Dang Thanh Tien",
+            "Dang Thị Anh Thy",
+            "Ha Thi Thuy An",
+          ],
+        },
+        BinhPhuoc: {
+          TamAnPhuoc: [
+            "Nguyễn Trung Hùng",
+            "Trần Duy Xuân",
+            "Lê Kim Nhật",
+            "Mai Văn Sắc",
+          ],
+        },
+        BinhThuan: {
+          TamPhuc: [
+            "Trần Thị Tố Nga",
+            "Phạm Thanh Tân",
+            "Vũ Thị Hà",
+            "Thái Tuấn Nhân",
+          ],
+        },
+        CaMau: {
+          MinhHai: [
+            "Trần Minh Hải",
+            "Trần Tấn Đạt",
+            "Đỗ Hồng Hoa",
+            "Tăng Hồng Kía",
+          ],
+        },
+        CanTho: {
+          HoanHao: [
+            "Nông Thị Oanh",
+            "Lý Thị Diễm Trang",
+            "Huỳnh Trần Gia Hưng",
+            "Lý Quốc Hòa",
+          ],
+          QuocTePhuongChau: [
+            "Nguyễn Duy Linh",
+            "Nguyễn Thị Thúy Hồng",
+            "Huỳnh Hồng Ngọc",
+            "Nguyễn Bảo Huy",
+          ],
+        },
+        CaoBang: {
+          HoaAn: [
+            "Hoàng Thị Bích",
+            "Lã Thị Vân",
+            "Lê Hồng Phúc",
+            "Nông Quỳnh Anh",
+            "Lý Thái Hòa",
+          ],
+        },
+
+        DaNang: {
+          Vinmec: [
+            "Philippe Macaire",
+            "Reinel Martin",
+            "Nguyễn Thanh Liêm",
+            "Phạm Nhật An",
+            "Nguyễn Thị Tân Sinh",
+            "Yi Hyeon Gyu",
+          ],
+          GiaDinh: [
+            "Đặng Công Hoàng",
+            "Trương Thị Chánh",
+            "Huỳnh Phiến",
+            "Nguyễn Nhật Quang",
+            "Phạm Sỹ Lâm",
+            "Lưu Văn Huân",
+            "Nguyễn Du Dương",
+            "Huỳnh Đức Sơn",
+          ],
+          HoanMy: [
+            "Lê Xuân Túy",
+            "Nguyễn Thanh Lâm",
+            "Trương Nguyễn Thoại Nhân",
+            "Lê Văn Tầm",
+            "Hà Nguyên Minh Quang",
+          ],
+          DakhoaTamTri: [
+            "Tô Viết Thuấn",
+            "Nguyễn Quốc Lân",
+            "Võ Văn Thu",
+            "Võ Thị Lài",
+            "Dương Bảo Thạch",
+            "Ngô Văn Hoa",
+            "Lê Quý Hồng Phát",
+            "Nguyễn Đại Tâm",
+            "Nguyễn Thị Lệ Hà",
+          ],
+          PhongkhamDaKhoaAnDuc1: [
+            "Trần Duy Hưng",
+            "Trần Thị Hồng Điểm",
+            "Đặng Phước Đạt",
+          ],
+        },
+        DakLak: {
+          DaKhoaCaoNguyen: [],
+          DaKhoaThienHanh: [],
+        },
+        DakNong: {
+          GiaNghia: [],
+          TinhHuuNghi: [],
+        },
+        DienBien: {
+          HuyenMuongAng: [],
+        },
+        DongNai: {
+          TamPhuoc: [],
+          DaKhoaQuocTeLongBinh: [],
+        },
+        DongThap: {
+          DaKhoaSaDec: [],
+        },
+        GiaLai: {
+          DaiHocYDuoc: [],
+        },
+        HaGiang: {
+          DucMinh: [],
+        },
+        HaNam: {
+          HaNoiDongVan: [],
+        },
+        HaNoi: {
+          QuocTeHongNgoc: [],
+          HongHa: [],
+          VinmecTimesCity: [],
+        },
+        HaTinh: {
+          HongHa: [],
+        },
+        HaiDuong: {
+          QuocTeHaNoi: [],
+        },
+        HaiPhong: {
+          Vinmec: [],
+        },
+        HauGiang: {
+          CareMedic: [],
+        },
+        TPHoChiMinh: {
+          Vinmec: [],
+          FV: [],
+          HoanMy: [],
+        },
+        HoaBinh: {
+          MEDLATEC: [],
+        },
+        HungYen: {
+          PhoNoi: [],
+        },
+        KhanhHoa: {
+          Vinmec: [],
+        },
+        //Nhan
+        KienGiang: {},
+        KomTum: {},
+        LaiChau: {},
+        LamDong: {},
+        LangSon: {},
+        LaoCai: {},
+        LongAn: {},
+        NamDinh: {},
+        NgheAn: {},
+        NinhBinh: {},
+        NinhThuan: {},
+        PhuTho: {},
+        PhuYen: {},
+        QuangBinh: {},
+        QuangNam: {
+          DaKhoaThaiBinhDuong: ["Tâm"],
+          DaKhoaThangHoa: ["Tâm"],
+        },
+        QuangNgai: {},
+        QuangNinh: {},
+        QuangTri: {},
+        SocTrang: {},
+        SonLa: {},
+        TayNinh: {},
+        ThaiBinh: {},
+        ThaiNguyen: {},
+        ThanhHoa: {},
+        Hue: {},
+        TienGiang: {},
+        TraVinh: {},
+        TuyenQuang: {},
+        VinhLong: {},
+        VinhPhuc: {},
+        YenBai: {},
+      };
+
+      $(document).ready(function () {
+        $("#province").change(function () {
+          const selectedProvince = $(this).val();
+          const hospitalsInProvince = hospitals[selectedProvince];
+
+          $("#hospital")
+            .empty()
+            .append('<option value="">Chọn bệnh viện</option>');
+          $("#doctor").empty().append('<option value="">Chọn bác sĩ</option>');
+
+          if (selectedProvince !== "") {
+            $.each(hospitalsInProvince, function (hospital, doctors) {
+              $("#hospital").append(
+                '<option value="' + hospital + '">' + hospital + "</option>"
+              );
+            });
+          }
+        });
+
+        $("#hospital").change(function () {
+          const selectedHospital = $(this).val();
+          const selectedProvince = $("#province").val();
+          const doctorsInHospital =
+            hospitals[selectedProvince][selectedHospital];
+
+          $("#doctor").empty().append('<option value="">Chọn bác sĩ</option>');
+
+          if (selectedHospital !== "") {
+            $.each(doctorsInHospital, function (_, doctor) {
+              $("#doctor").append(
+                '<option value="' + doctor + '">' + doctor + "</option>"
+              );
+            });
+          }
+        });
+
+        $("#appointmentForm").submit(function (event) {
+          event.preventDefault();
+
+          const fullName = $("#fullName").val();
+          const doctorName = $("#doctor").val();
+          const hospitalName = $("#hospital").val();
+          const appointmentDate = $("#appointmentDate").val();
+          const appointmentTime = $("#appointmentTime").val();
+
+          // Tính toán lần khám và mã giảm giá
+
+          let appointmentCount = 0;
+          let discountAmount = 0;
+
+          if (localStorage.getItem("appointmentCount")) {
+            appointmentCount = parseInt(
+              localStorage.getItem("appointmentCount")
+            );
+          }
+
+          if (appointmentCount === 0) {
+            discountAmount = 0;
+          } else if (appointmentCount === 1) {
+            discountAmount = 10;
+          } else if (appointmentCount >= 2 && appointmentCount <= 4) {
+            discountAmount = 20;
+          } else {
+            discountAmount = 50;
+          }
+
+          const totalAmount = 300 - discountAmount;
+
+          // Hiển thị thông tin hóa đơn
+          $("#doctorName").text("Bác sĩ: " + doctorName);
+          $("#hospitalName").text("Bệnh viện: " + hospitalName);
+          $("#appointmentDateTime").text(
+            "Ngày khám: " + appointmentDate + ", " + appointmentTime
+          );
+          $("#totalAmount").text(
+            "Số tiền cần thanh toán: " + totalAmount + "k"
+          );
+
+          // Lưu thông tin lịch khám và cập nhật số lần khám
+          localStorage.setItem("appointmentCount", ++appointmentCount);
+
+          // Hiển thị hóa đơn và ẩn form đặt lịch khám
+          $("#appointmentForm").hide();
+          $("#invoice").show();
+        });
+      });
+    </script>
+  </body>
+</html>

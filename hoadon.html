@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url("./hd.jpg");
+      }
+      .bottom-right-image {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+      }
+    </style>
+    <title>Hóa đơn</title>
+  </head>
+  <body>
+    <h1>Hóa đơn</h1>
+
+    <label for="patient-name">Tên bản thân:</label>
+    <input type="text" id="patient-name" placeholder="Nhập tên bản thân" />
+
+    <label for="hospital-name">Tên bệnh viện:</label>
+    <input type="text" id="hospital-name" placeholder="Nhập tên bệnh viện" />
+
+    <label for="doctor-name">Tên bác sĩ:</label>
+    <input type="text" id="doctor-name" placeholder="Nhập tên bác sĩ" />
+
+    <label for="appointment-date">Lịch khám:</label>
+    <input type="date" id="appointment-date" />
+
+    <label for="appointment-time">Thời gian khám:</label>
+    <input type="time" id="appointment-time" />
+
+    <button onclick="generateInvoice()">Thanh toán</button>
+    <img src="./qr.jpg" class="bottom-right-image" />
+    <div id="invoice" style="display: none">
+      <h2>Hóa đơn</h2>
+      <p id="patient-info"></p>
+      <p id="hospital-info"></p>
+      <p id="doctor-info"></p>
+      <p id="appointment-info"></p>
+      <p>Tổng tiền: 350,000 VND</p>
+      <p>Quý khách đã đặt lịch và thanh toán thành công.</p>
+    </div>
+
+    <script>
+      function generateInvoice() {
+        var fullName = document.getElementById("patient-name").value;
+        var hospital = document.getElementById("hospital-name").value;
+        var doctor = document.getElementById("doctor-name").value;
+        var appointmentDate = document.getElementById("appointment-date").value;
+        var appointmentTime = document.getElementById("appointment-time").value;
+
+        var patientInfo = "Tên bản thân: " + fullName;
+        var hospitalInfo = "Tên bệnh viện: " + hospital;
+        var doctorInfo = "Tên bác sĩ: " + doctor;
+        var appointmentInfo =
+          "Lịch khám: " +
+          appointmentDate +
+          ", Thời gian khám: " +
+          appointmentTime;
+
+        document.getElementById("patient-info").textContent = patientInfo;
+        document.getElementById("hospital-info").textContent = hospitalInfo;
+        document.getElementById("doctor-info").textContent = doctorInfo;
+        document.getElementById("appointment-info").textContent =
+          appointmentInfo;
+
+        document.getElementById("patient-name").disabled = true;
+        document.getElementById("hospital-name").disabled = true;
+        document.getElementById("doctor-name").disabled = true;
+        document.getElementById("appointment-date").disabled = true;
+        document.getElementById("appointment-time").disabled = true;
+
+        var invoiceDiv = document.getElementById("invoice");
+        invoiceDiv.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

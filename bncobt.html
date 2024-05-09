@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HealthyBody.vn</title>
+<style>
+  
+/* CSS cho thanh menu */
+body{
+  background-image: url("./kt.jpg");
+}
+.menu {
+ 
+  display: flex;
+  justify-content: space-around;
+  background-color:rgb(111, 77, 231);
+  padding: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+}
+
+.menu a:hover {
+  background-color: hsl(35, 93%, 46%);
+}
+
+/* CSS cho nội dung */
+.content {
+  display: none;
+  padding: 20px;
+ 
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(248, 255, 250);
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #80e9bb;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+<script>
+// JavaScript để hiển thị nội dung khi nhấp vào
+function showContent(contentId) {
+  var content = document.getElementById(contentId);
+  var contents = document.getElementsByClassName('content');
+  for (var i = 0; i < contents.length; i++) {
+    contents[i].style.display = 'none';
+  }
+  content.style.display = 'block';
+}
+</script>
+</head>
+<body>
+
+<!-- Thanh menu -->
+<div class="menu">
+  <div class="dropdown">
+    
+    <a href="#" onclick="showContent('dau-hieu')">Dấu hiệu</a>
+    <div class="dropdown-content">
+      <a href="#" onclick="showContent('dau-hieu-tieu-duong')">Bệnh tiểu đường</a>
+      <a href="#" onclick="showContent('dau-hieu-huyet-ap')">Bệnh huyết áp</a>
+      <a href="#" onclick="showContent('dau-hieu-beo-phi')">Bệnh béo phì</a>
+      <a href="#" onclick="showContent('dau-hieu-suy-dinh-duong')">Bệnh suy dinh dưỡng</a>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    
+    <a href="#" onclick="showContent('han-che')">Hạn Chế</a>
+    <div class="dropdown-content">
+      <a href="#" onclick="showContent('han-che-tieu-duong')">Bệnh tiểu đường</a>
+      <a href="#" onclick="showContent('han-che-huyet-ap')">Bệnh huyết áp</a>
+      <a href="#" onclick="showContent('han-che-beo-phi')">Bệnh béo phì</a>
+      <a href="#" onclick="showContent('han-che-suy-dinh-duong')">Bệnh suy dinh dưỡng</a>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <a href="#" onclick="showContent('nen')">Nên</a>
+    <div class="dropdown-content">
+      <a href="#" onclick="showContent('nen-tieu-duong')">Bệnh tiểu đường</a>
+      <a href="#" onclick="showContent('nen-huyet-ap')">Bệnh huyết áp</a>
+      <a href="#" onclick="showContent('nen-beo-phi')">Bệnh béo phì</a>
+      <a href="#" onclick="showContent('nen-suy-dinh-duong')">Bệnh suy dinh dưỡng</a>
+    </div>
+  </div>
+</div>
+
+<!-- Nội dung -->
+<div id="dau-hieu" class="content">
+</div>
+
+<div id="dau-hieu-tieu-duong" class="content">
+  
+  <h2>Dấu hiệu - Bệnh tiểu đường</h2>
+  <h4><pre><h3>1.Giảm cân dù ăn nhiều<br>
+               2.Cảm thấy khát liên tục<br>
+               3.Cảm thấy đói bụng<br>
+               4. Gặp nhiều vấn đề khi ngủ<br>
+               5.Tê bì, mất cảm giác ở chân<br>
+               6.Gặp các vấn đề về da<br>
+               7.Cơ thể uể oải, mệt mỏi<br>
+               8.Tầm nhìn hạn chế<br>
+               9.Huyết áp tăng cao<br>
+  </h3>
+
+  </pre>
+                
+</div>
+
+<div id="dau-hieu-huyet-ap" class="content">
+  
+  <h2>Dấu hiệu - Bệnh huyết áp</h2>
+  <h3><pre>
+    1. Hoa mắt, chóng mặt
+    2. Đau đầu
+    3. Ngất xỉu
+    4. Thiếu tập trung
+    5. Mờ mắt
+    6. Buồn nôn
+    7. Da lạnh, ẩm, nhợt nhạt
+    8. Tim đập nhanh, thở nhanh, thở nông
+    9. Mệt mỏi
+    10. Trầm cảm
+    11. Thường xuyên khát nước</pre></h3>
+  
+    
+</div>
+
+<div id="dau-hieu-beo-phi" class="content">
+  <h2>Dấu hiệu - Bệnh béo phì</h2>
+ <h3><pre>
+    1. Thay đổi cân nặng trong một thời gian ngắn
+    2. Đau lưng
+    3. Tâm lý tiêu cực
+    4. Thường xuyên bị khó thở
+    5. Ợ nóng
+    6. Ngáy ngủ
+    7. Thay đổi về da
+    8. Suy tĩnh mạch
+    9. Kinh nguyệt không đều
+    10. Huyết áp cao
+     </pre></h3>
+  
+     
+</div>
+
+<div id="dau-hieu-suy-dinh-duong" class="content">
+  <h2>Dấu hiệu - Bệnh suy dinh dưỡng</h2>
+  <h3><pre>
+    1.Mệt mỏi, uể oải, giảm vận động.
+    2.Teo dần lớp mỡ dưới da.
+    3.Lớp cơ lỏng lẻo, giảm khối lượng.
+    4.Vết thương lâu lành hơn bình thường.
+    5.Dễ mắc bệnh lý nhiễm trùng do sức đề kháng giảm.
+    6.Da xanh xao, không đàn hồi, khô.
+    7.Lớp mỡ dưới da gần như biến mất.
+    8.Khuôn mặt gầy guộc.
+    9.Tóc và móng khô, dễ gãy rụng.
+    10.Biểu hiện suy tim, suy gan, suy hô hấp do thiếu năng lượng kéo dài. 
+   </pre></h3>
+</div>
+
+<div id="han-che" class="content">
+</div>
+
+<div id="han-che-tieu-duong" class="content">
+  <h2>Hạn Chế - Bệnh tiểu đường</h2>
+  <h3><pre>
+    1.Hạn chế ăn gạo trắng, bánh mì, miến, bột sắn dây, các loại củ nướng
+    2.Hạn chế các thực phẩm chứa chất béo bão hòa, nhiều cholesterol gây nguy cơ tăng bệnh tim mạch,
+    3.Không nên ăn thịt lợn mỡ, phủ tạng động vật, da của gia cầm,
+     kem tươi, dầu dừa, các loại bánh kẹo ngọt, mứt, sirô, các loại nước có ga...
+    4.Hạn chế tối đa các loại hoa quả sấy khô, mứt hoa quả... 
+  </pre></h3>
+</div>
+
+<div id="han-che-huyet-ap" class="content">
+  <h2>Hạn Chế - Bệnh huyết áp</h2>
+  <h3><pre>
+    -Hạn chế natri, giàu kali, canxi và magie,
+     hạn chế rượu bia, không hút thuốc lá, tiêu thụ thức ăn với mức năng lượng vừa phải,...
+  </pre></h3>
+</div>
+
+<div id="han-che-beo-phi" class="content">
+  <h2>Hạn Chế - Bệnh béo phì</h2>
+  <h3><pre>
+    -Các loại bánh nhiều đường và dầu mỡ. Người béo phì nên tránh xa bánh đóng gói, bánh quy và bánh rán.
+    -Đồ uống đóng chai. Bạn nên hạn chế nước ngọt, nước ép trái cây đóng hộp, nước tăng lực,…
+    -Các loại thịt chế biến sẵn. Chẳng hạn như xúc xích, thịt xông khói và thịt đóng hộp.
+    -Thức ăn nhanh. Hãy tránh xa pizza, các món chiên nhiều dầu, snack khoai tây, sữa lắc,…
+  </pre></h3>
+</div>
+
+<div id="han-che-suy-dinh-duong" class="content">
+  <h2>Hạn Chế - Bệnh suy dinh dưỡng</h2>
+  <h3>Tinh bột:Gồm các loại thực phẩm như cơm, bánh mì...</h3>
+  <h3>Chất béo: không nên nạp quá nhiều chất béo vào cơ thể, phù hợp là duy trì không quá 600g/tháng.</h3>
+  <h3>Đường: người suy dinh dưỡng không cần ăn quá nhiều đường, chỉ nên duy trì ở mức không quá 500g/tháng</h3>
+  <h3>Muối: không nên ăn quá nhiều muối vì có thể gây ảnh hưởng tiêu cực cho sức khỏe. </h3>
+</div>
+
+<div id="nen" class="content">
+</div>
+
+<div id="nen-tieu-duong" class="content">
+  <h2>Nên - Bệnh tiểu đường</h2>
+ <h3><pre>
+   1.Nhóm đường bột: Ngũ cốc nguyên hạt, đậu đỗ, gạo còn vỏ cám, rau củ...
+   2.Nhóm thịt cá: Người bệnh tiểu đường nên ăn cá, thịt nạc, thịt gia cầm bỏ da, thịt lọc 
+   bỏ mỡ, các loại đậu đỗ...
+   3.Nhóm chất béo, đường: dầu đậu nành, vừng, dầu cá, mỡ cá, olive...
+   4.Nhóm rau: Người bệnh tiểu đường nên ăn rau nhiều như: ăn sống, hấp, luộc, rau trộn.
+   5.Hoa quả:  cần tăng cường ăn trái cây tươi:cam, táo,...
+ </pre></h3>
+</div>
+
+<div id="nen-huyet-ap" class="content">
+  <h2>Nên - Bệnh huyết áp</h2>
+  <h3><pre>
+    1.Tinh bột: Gạo tẻ, gạo nếp, các loại khoai và đậu đỗ, lạc, vừng.
+    2.Các loại thịt: Nên ăn các loại ít có ít mỡ như thịt bò, thịt gà ta, thịt lợn nạc...
+    3.Trứng: Nên ăn trứng gà vì chúng có ít lipid hơn trứng vịt.
+    4.Sữa: Người mắc bệnh tăng huyết áp nên ăn các loại sữa tách béo, sữa đậu nành, sữa chua.
+    5.Hải sản: Nên ăn cá, tôm, cua
+  </pre></h3>
+</div>
+
+<div id="nen-beo-phi" class="content">
+  <h2>Nên- Bệnh béo phì</h2>
+  <h3><pre>
+   1.Nhiều trái cây và rau quả.
+   2.Các thực phẩm giàu tinh bột như khoai tây, bánh mì, gạo, mì ống,… 
+   3.Sữa và chế phẩm từ sữa.
+   4.Thịt, cá, trứng, đậu và các nguồn protein từ thực vật.
+   5.Ăn ít thức ăn dầu mỡ và hạn chế đồ uống có đường.
+  </pre></h3>
+</div>
+
+<div id="nen-suy-dinh-duong" class="content">
+  <h2>Nên - Bệnh suy dinh dưỡng</h2>
+  <h3><pre>
+  1.Tinh bột: Gồm các loại thực phẩm như cơm, bánh mì...
+  2.Rau, củ, quả: Các loại rau đều chứa hàm lượng cao chất xơ, vitamin và khoáng chất,...
+  3.Chất béo:  dầu mè, đậu nành, lạc, ngô, ô liu, mỡ cá,..
+  4.Chất đạm: đạm động vật (trứng, thịt, cá, sữa,...) và đạm thực vật (các loại đậu),...
+  5.Đường: chỉ nên duy trì ở mức không quá 500g/tháng.
+  6.Muối:Khi nấu nướng, chú ý dùng muối i-ốt để bổ sung thêm i-ốt cho cơ thể.
+  </pre></h3>
+<!-- JavaScript để ẩn hiện nội dung mặc định -->
+<script>
+    showContent('dau-hieu');
+    </script>
+    
+    </body>
+    </html>

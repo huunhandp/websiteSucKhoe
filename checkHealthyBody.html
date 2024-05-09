@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      table th {
+        background-color: rgb(111, 77, 231);
+        width: 50px;
+        height: 50px;
+      }
+      table td {
+        border: 2px outset rgb(111, 77, 231);
+      }
+      table {
+        width: 1000px;
+        height: 400px;
+        border-collapse: collapse;
+      }
+      table caption {
+        font-size: 40px;
+      }
+      tr input {
+        width: 60px;
+        height: 30px;
+        border: 2px solid black;
+      }
+      .thuocDo {
+        border-left: 2px outset rgb(111, 77, 231);
+        border-top: 2px outset rgb(111, 77, 231);
+      }
+      .giaTri {
+        border-right: 2px outset rgb(111, 77, 231);
+        border-top: 2px outset rgb(111, 77, 231);
+      }
+      .moTa {
+        font-size: 20px;
+        color: orange;
+      }
+      .thuocDo,
+      .giaTri,
+      .nhipTim,
+      .calo,
+      .huyetAp,
+      .chiSoDuongHuyet,
+      .canNang,
+      .chieuCao {
+        font-size: 20px;
+        color: orange;
+      }
+      .thuocDo,
+      .giaTri {
+        color: white;
+      }
+      .BMI {
+        width: 400px;
+        height: 500px;
+        margin-left: 1080px;
+        margin-top: -500px;
+      }
+      .buttonLuu button {
+        width: 90px;
+        height: 40px;
+        border-radius: 15px;
+        background-color: rgb(111, 77, 231);
+        transition: all 0.5s linear;
+      }
+      .buttonLuu button:hover {
+        transform: translate(0, -4px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="thanhMenu">
+      <h1>
+        <span style="color: rgb(156, 87, 221)">Healt</span
+        ><span style="color: rgb(183, 132, 230)">hy</span
+        ><span style="color: rgb(125, 238, 238)">Body</span>
+      </h1>
+      <div class="menu">
+        <ul>
+          <li><a href="./TheoDoiSucKhoeDienTu.html">Sức khỏe điện tử</a></li>
+          <li><a href="./KienThuc.html">Bạn có biết?</a></li>
+          <li><a href="./CheDoTapLuyen.html">Chế độ tập luyện</a></li>
+          <li><a href="./DatLich.html">Đặt lịch khám online</a></li>
+          <li><a href="./DatDoAn.html">Đặt đồ ăn trực tuyến</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="banhNhapSoLieu">
+      <table>
+        <caption>
+          <b> Thông tin sức khỏe</b>
+        </caption>
+        <thead>
+          <tr>
+            <th class="thuocDo">Thước đo</th>
+            <th class="giaTri">Giá trị</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="nhipTim">Nhịp tim</td>
+            <td>
+              <input type="number" id="heartRate" /><span class="moTa"
+                >(Nhịp tim bình thường của một người thường dao động trong
+                khoảng từ 60 đến 100 nhịp mỗi phút)</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="calo">Calo</td>
+            <td>
+              <input type="number" id="cholesterol" /><span class="moTa"
+                >(Một người trưởng thành có thể cần từ khoảng 2000 đến 2500 calo
+                mỗi ngày)</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="huyetAp">Huyết áp</td>
+            <td>
+              <input type="number" id="bloodPressure" /><span class="moTa"
+                >(Huyết áp bình thường của một người thường là dưới 120/80
+                mmHg.)</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="chiSoDuongHuyet">Chỉ số đường huyết</td>
+            <td>
+              <input type="number" id="glucose" /><span class="moTa"
+                >(Đường huyết bình thường của một người khoảng 70-100 mg/dL khi
+                đang ở trạng thái đói và dưới 140 mg/dL 2 giờ sau khi ăn.)</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="canNang">Cân nặng(kg)</td>
+            <td>
+              <input type="number" id="weight" /><span class="moTa"
+                >( phân loại BMI: Dưới 18.5: Dưới cân, 18.5 - 24.9: Cân nặng
+                bình thường, 25.0 - 29.9: Hơi thừa cân,30.0 trở lên: Béo
+                phì)</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="chieuCao">Chiều cao(cm)</td>
+            <td>
+              <input type="number" id="height" /><span class="moTa"
+                >( phân loại BMI: Dưới 18.5: Dưới cân, 18.5 - 24.9: Cân nặng
+                bình thường, 25.0 - 29.9: Hơi thừa cân,30.0 trở lên: Béo
+                phì)</span
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="hinhAnhBMI">
+        <img class="BMI" src="./BMI.jpg" alt="ảnh BMI" />
+      </div>
+      <div class="buttonLuu"><button onclick="checkHealth()">Lưu</button></div>
+      <div id="warning"></div>
+    </div>
+    <script>
+      function checkHealth() {
+        var heartRate = parseFloat(document.getElementById("heartRate").value);
+        var cholesterol = parseFloat(
+          document.getElementById("cholesterol").value
+        );
+        var bloodPressure = document.getElementById("bloodPressure").value;
+        var glucose = parseFloat(document.getElementById("glucose").value);
+        var weight = parseFloat(document.getElementById("weight").value);
+        var height = parseFloat(document.getElementById("height").value);
+        var warningMsg = "";
+
+        // Kiểm tra cảnh báo về nhịp tim
+        if (heartRate > 120 || heartRate < 40) {
+          warningMsg +=
+            "Cảnh báo: Bạn có dấu hiệu bị rối loạn tim, bạn có thể đặt lịch khám để chúng tôi có thể tư vấn! <a href='http://127.0.0.1:5500/DatLich.html'>Đặt lịch khám</a><br>";
+        }
+
+        // Kiểm tra cảnh báo về clo
+        if (cholesterol < 1200) {
+          warningMsg +=
+            "Cảnh báo: Calo của bạn đã bị thiếu dễ khiến có cảm giác mệt mỏi,nếu bạn muốn chắc sức khỏe hay đến với chúng tôi! <a href='http://127.0.0.1:5500/DatLich.html'>Đặt lịch khám</a><br>";
+        } else if (cholesterol > 3000) {
+          warningMsg +=
+            "Cảnh báo: Calo của bạn bị thừa dễ ảnh hưởng đến xương khớp, đến ngay bệnh viện chúng tôi để kiểm tra sức khỏe tốt nhất có thể! <a href='http://127.0.0.1:5500/DatLich.html'>Đặt lịch khám</a><br>";
+        }
+
+        // Kiểm tra cảnh báo về huyết áp
+        if (bloodPressure >= 140) {
+          warningMsg +=
+            "Cảnh báo: Bạn có nguy cơ bệnh thận cấp bởi huyết áp tăng!Hãy gọi ngay số điện 02363711111 hoặc đến với lịch khám để sắp xếp thời gian đi khám nhé <a href='http://127.0.0.1:5500/DatLich.html'>Đặt lịch khám</a><br>";
+        } else if (bloodPressure < 90) {
+          warningMsg +=
+            "Cảnh báo: Huyết áp bạn đang thấp, có thể gây chóng mặt và suy giảm tư duy. <a href='http://127.0.0.1:5500/DatLich.html'>Đặt lịch khám</a><br>";
+        }
+
+        // Kiểm tra cảnh báo về chỉ số đường huyết
+        if (glucose >= 200) {
+          warningMsg +=
+            "Cảnh báo: Bạn có nguy cơ mắc bệnh tiểu đường do đường huyết cao! <a href='http://127.0.0.1:5500/DatLich.html'>Đặt lịch khám</a><br>";
+        } else if (glucose < 70) {
+          warningMsg +=
+            "Cảnh báo: Bạn có thể đang gặp nguy cơ hạ đường huyết, bạn nên kiểm tra kỹ càng! <a href='http://127.0.0.1:5500/DatLich.html'>Đặt lịch khám</a><br>";
+        }
+
+        // Kiểm tra cảnh báo về BMI
+        var bmi = calculateBMI(weight, height);
+        if (bmi >= 30) {
+          warningMsg +=
+            "Cảnh báo: Bạn có nguy cơ béo phì, nên tăng cường hoạt động thể chất và điều chỉnh chế độ ăn uống! <a href='http://127.0.0.1:5500/DatLich.html'>Đặt lịch khám</a><br>";
+        } else if (bmi < 18.5) {
+          warningMsg +=
+            "Cảnh báo: Bạn có nguy cơ thiếu cân, nên tăng cường dinh dưỡng và theo dõi sức khỏe! <a href='http://127.0.0.1:5500/DatLich.html'>Đặt lịch khám</a><br>";
+        }
+
+        document.getElementById("warning").innerHTML = warningMsg;
+      }
+
+      function calculateBMI(weight, height) {
+        var heightMeter = height / 100;
+        return weight / (heightMeter * heightMeter);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,378 @@
+.thanhMenu {
+  display: flex;
+  align-items: center;
+  width: 101%;
+  margin-top: -8px;
+  margin-left: -8px;
+  height: 50px;
+}
+
+.menu {
+  margin-left: auto;
+  /* position: absolute;
+  margin-left: 500px; */
+}
+.menu a {
+  text-decoration: none;
+  color: inherit;
+}
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+.mucGioiThieu {
+  background-color: rgb(111, 77, 231);
+  width: 101%;
+  height: 400px;
+  margin-left: -8px;
+  margin-top: -25px;
+}
+.mucGioiThieu h1 {
+  color: white;
+  padding-top: 80px;
+  margin-left: 1%;
+  text-shadow: 0 0 10px #cccccc, 0 0 20px #cccccc, 0 0 30px #cccccc;
+}
+.chu {
+  padding-left: 50px;
+}
+.spiner {
+  --size: 300px;
+  --first-color: rgb(125, 238, 238);
+  --second-color: rgb(156, 87, 221);
+  position: relative;
+}
+.spiner::after {
+  content: "";
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  border: 2px solid var(--first-color);
+  border-top: 2px solid var(--second-color);
+  border-radius: 50%;
+  /* animation: spin 4s ease-in-out infinite; */
+}
+.container {
+  height: 100px;
+  margin-left: 1050px;
+  margin-top: -120px;
+}
+
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.spiner img {
+  position: absolute;
+  top: 155px;
+  left: 32%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+.bacSi img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 1200px;
+  margin-top: 30px;
+  animation: circleAnimation 4s linear infinite;
+}
+.dienThoai img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 1200px;
+  margin-top: 30px;
+  animation: circleAnimationDienThoai 4s linear infinite;
+}
+@keyframes circleAnimation {
+  0% {
+    transform: rotate(0deg) translate(-150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-150px) rotate(-360deg);
+  }
+}
+@keyframes circleAnimationDienThoai {
+  0% {
+    transform: rotate(360deg) translate(-150px) rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg) translate(-150px) rotate(0deg);
+  }
+}
+.noiChuyen img {
+  width: 150px;
+  height: 100px;
+  /* object-fit: cover; */
+  margin-left: 1000px;
+  margin-top: -90px;
+  position: absolute;
+  z-index: 100000;
+}
+.noiChuyen p {
+  margin-left: 1020px;
+  position: absolute;
+  margin-top: -70px;
+  color: white;
+  font-size: 20px;
+  animation: shake 7s infinite;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.thongTinLienHe {
+  position: absolute;
+  margin-left: -8px;
+  margin-top: 1000px;
+  width: 100%;
+  height: 30%;
+  border: 1px solid black;
+}
+.tinTuc {
+  position: absolute;
+  margin-top: 9%;
+  margin-left: 15%;
+  width: 70%;
+  height: 70%;
+  border: 2px solid #f3f3f3;
+  border-radius: 1%;
+}
+/* .tinTuc {
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 13%;
+  border: 1px solid #e5e7eb;
+  border-radius: 10%;
+} */
+.videoDauHieuTieuDuong {
+  position: absolute;
+  border-radius: 2%;
+  margin-left: 1%;
+  margin-top: 4%;
+}
+.tinTuc p {
+  position: absolute;
+  margin-left: 1%;
+  margin-top: 1%;
+  font-size: 150%;
+}
+.dhtd p {
+  position: absolute;
+  margin-top: 42.5%;
+  font-weight: bold;
+  font-size: 140%;
+}
+.video a {
+  text-decoration: none;
+}
+.videoBenhHuyetApCao {
+  position: absolute;
+  margin-left: 59%;
+  border-radius: 4%;
+  margin-top: 4%;
+}
+.dhha p {
+  position: absolute;
+  margin-left: 60%;
+  margin-top: 19%;
+  font-size: 110%;
+}
+.dauHieuBienBeoPhi {
+  position: absolute;
+  margin-top: 4%;
+  margin-left: 80%;
+  border-radius: 4%;
+}
+.dhbp p {
+  position: absolute;
+  margin-left: 80%;
+  margin-top: 19%;
+  font-size: 110%;
+}
+.suyDinhDuong {
+  position: absolute;
+  margin-left: 59%;
+  border-radius: 4%;
+  margin-top: 27%;
+}
+.cheDoDinhDuongTieuDuong {
+  position: absolute;
+  margin-left: 80%;
+  border-radius: 4%;
+  margin-top: 27%;
+}
+.sdd p {
+  position: absolute;
+  margin-left: 59%;
+  margin-top: 42%;
+  font-size: 110%;
+}
+.cddd p {
+  position: absolute;
+  margin-left: 80%;
+  margin-top: 42%;
+  font-size: 110%;
+}
+.loiDan p {
+  position: absolute;
+  margin-top: -2%;
+  margin-bottom: 10%;
+}
+.loiDan {
+  position: absolute;
+  margin-left: 230px;
+  /* margin-bottom: 100%; */
+  width: 70%;
+  height: 50%;
+}
+.loiDan h2 {
+  margin-bottom: 4%;
+}
+.tapLuyen img {
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  margin-top: 44%;
+  margin-left: 15%;
+}
+.tapLuyen h3 {
+  position: absolute;
+  font-size: 120%;
+  margin-top: 44%;
+  margin-left: 36%;
+  font-weight: bold;
+}
+.tapLuyen p {
+  position: absolute;
+  font-size: 100%;
+  margin-top: 47%;
+  margin-left: 36%;
+}
+.datDoAn img {
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  margin-top: 55%;
+  margin-left: 15%;
+}
+.datDoAn p {
+  position: absolute;
+  font-size: 100%;
+  margin-top: 58%;
+  margin-left: 36%;
+}
+.datDoAn h3 {
+  position: absolute;
+  font-size: 120%;
+  margin-top: 55%;
+  margin-left: 36%;
+  font-weight: bold;
+}
+.buttonDangNhap {
+  position: absolute;
+  margin-top: -10%;
+  margin-left: 3%;
+}
+.buttonDangNhap button {
+  width: 150px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 6%;
+  background-color: rgb(111, 77, 231);
+  color: #f3f3f3;
+}
+.buttonDangKi {
+  position: absolute;
+  margin-top: -10%;
+  margin-left: 17%;
+}
+.buttonDangKi button {
+  width: 150px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 6%;
+  background-color: rgb(111, 77, 231);
+  color: #f3f3f3;
+}
+.khungAnhTron {
+  position: absolute;
+  background-color: rgb(127, 100, 226);
+  height: 7%;
+  width: 30%;
+  margin-top: -15%;
+  margin-left: 1%;
+  border-radius: 60px;
+  animation: pulse 3s infinite;
+}
+.anhBS1,
+.anhBS2,
+.anhBS3 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.anhBS1 {
+  position: absolute;
+  margin-left: 6%;
+  margin-top: 1%;
+  z-index: 1;
+}
+.anhBS2 {
+  position: absolute;
+  margin-left: 1%;
+  margin-top: 1%;
+}
+.anhBS3 {
+  position: absolute;
+  margin-left: 12%;
+  margin-top: 1%;
+  z-index: 1;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(127, 100, 226, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(127, 100, 226, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(127, 100, 226, 0);
+  }
+}
+.khungAnhTron p {
+  position: absolute;
+  margin-left: 25%;
+  color: #f3f3f3;
+  font-size: 100%;
+  /* text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; */
+}
